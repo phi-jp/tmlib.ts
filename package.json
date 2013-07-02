@@ -1,0 +1,28 @@
+{
+  "name": "tmlib.ts",
+  "version": "0.0.0",
+  "description": "tmlib.ts is typescript version of tmlib.js.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/phi1618/tmlib.ts.git"
+  },
+  "keywords": [
+    "tmlib",
+    "javascript",
+    "typescript"
+  ],
+  "author": "phi-jp",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-typescript": "~0.2.0"
+  }
+}
