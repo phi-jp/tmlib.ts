@@ -11,9 +11,9 @@ module.exports = function(grunt) {
     buildDir: "build",
     
     watch: {
-      jsx: {
+      ts: {
         files: ['**/*.ts'],
-        typescript: ['typescript']
+        tasks: ['typescript:build']
       },
     },
     typescript: {
