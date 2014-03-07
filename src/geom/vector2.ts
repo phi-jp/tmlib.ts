@@ -3,6 +3,7 @@
  */
 
 module tm.geom {
+
     export class Vector2 {
         x: number;
         y: number;
@@ -14,22 +15,40 @@ module tm.geom {
             this.x = x;
             this.y = y;
         }
-        
+
         /**
          * dummy
          */
-        set(x: number, y: number): Vector2 {
-            this.x = x;
-            this.y = y;
+        set(x:number, y:number): Vector2;
+        set(v:Vector2): Vector2;
+        set(a:any, b?:number): Vector2 {
+            if (a instanceof Vector2) {
+                this.x = a.x;
+                this.y = a.y;
+            }
+            else {
+                this.x = a;
+                this.y = b;
+            }
+
             return this;
         }
         
         /**
          * dummy
          */
-        add(x: number, y: number): Vector2 {
-            this.x += x;
-            this.y += y;
+        add(x:number, y:number): Vector2;
+        add(v:Vector2): Vector2;
+        add(a:any, b?:number): Vector2 {
+            if (a instanceof Vector2) {
+                this.x += a.x;
+                this.y += a.y;
+            }
+            else {
+                this.x += a;
+                this.y += b;
+            }
+            
             return this;
         }
         
@@ -109,21 +128,21 @@ module tm.geom {
          * dummy
          */
         equals(v: Vector2): boolean {
-            return this.x === v.x && this.y === v.y;
+            return this.x == v.x && this.y == v.y;
         }
         
         /**
          * dummy
          */
         equalsNumber(x: number, y: number): boolean {
-            return this.x === x && this.y === y;
+            return this.x == x && this.y == y;
         }
         
         /**
          * dummy
          */
-        equalsArray(arr: Array): boolean {
-            return this.x === arr[0] && this.y === arr[1];
+        equalsArray(arr: Array<number>): boolean {
+            return this.x == arr[0] && this.y == arr[1];
         }
         
         /**

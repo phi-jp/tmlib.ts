@@ -21,6 +21,13 @@ module.exports = function(grunt) {
         src: files,
         dest: 'build/tmlib.ts.js',
       },
+      shooting: {
+        src: ['examples/shooting/main.ts'],
+        dest: 'examples/shooting/main.ts.js',
+        options: {
+          base_path: 'src',
+        }
+      },
     },
   });
   
